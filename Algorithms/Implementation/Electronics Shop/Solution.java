@@ -44,9 +44,9 @@ public class Solution {
         int max = -1;
         for(int i = 0, j = 0; i < n; i++){
             for(; j < m; j++){
-                if(keyboards[i]+pendrives[j] > s) break; //This prevents j from incrementing
-                if(keyboards[i]+pendrives[j] > max)
-                    max = keyboards[i]+pendrives[j];
+                int sum = keyboards[i]+pendrives[j];
+                if(sum > s) break; //This prevents j from incrementing
+                if(sum > max) max = sum;
             }
         }
         System.out.println(max);
